@@ -4,7 +4,6 @@
   box-sizing: border-box;
   color: black;
 }
-
 #tresEnRaya .disable {
   text-transform:uppercase;
   font-size:30px;
@@ -35,7 +34,6 @@
   background-image: linear-gradient(to bottom, #9d5bde, #b42f2f);
   border-color: #2f96b4 #2f96b4 #1f6377;
 }
-
 #tresEnRaya #game li {
   list-style:none;
   color:#858585;
@@ -68,7 +66,6 @@ padding: 10px;
   align-items: center;
   justify-content: space-evenly;
 }
-
 #tresEnRaya #reset {
   display: flex;
   justify-content: center;

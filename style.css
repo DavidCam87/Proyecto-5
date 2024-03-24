@@ -1,8 +1,6 @@
 @import url("./src/tresEnRaya/tr.css");
 @import url("./src/juegoMemoria/jm.css");
 @import url("./src/snakeGame/sg.css");
-
-
 *{
   margin: 0;
   padding: 0;
@@ -12,7 +10,6 @@
   font-family: 'Poppins', sans-serif;
   color: rgb(255, 255, 255);
 }
-
 .logo{
   font-size: 30px;
   cursor: pointer;
@@ -22,7 +19,6 @@
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-
   height: 100svh
 }
 nav{
@@ -52,7 +48,6 @@ nav{
   width: 300px;
   cursor: pointer;
 }
-
 #hero{
   margin-top: 50px;
   display: flex;
@@ -76,7 +71,6 @@ article{
   .nav-links{
     display: none;
   }
-  
   .btnNav{
     display: block;
     cursor: pointer;
@@ -123,6 +117,4 @@ article{
     background-color: transparent;
     border: none;
   }
-
 }
-
