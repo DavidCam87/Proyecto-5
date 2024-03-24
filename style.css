@@ -12,6 +12,7 @@
   font-family: 'Poppins', sans-serif;
   color: rgb(255, 255, 255);
 }
+
 .logo{
   font-size: 30px;
   cursor: pointer;
@@ -44,12 +45,8 @@ nav{
 }
 .tres, .snakeImg{
   border: 8px solid rgb(255, 255, 255);
-  height: 300px;
-  width: 300px;
-  border-radius: 20px;
-  cursor: pointer;
 }
-.memory{
+.memory, .tres, .snakeImg{
   border-radius: 20px;
   height: 300px;
   width: 300px;
@@ -96,7 +93,6 @@ article{
     flex-direction: column;
     top: 40px;
     right: -50px;
-    background-color: var(--dci-textTitle);
     padding: 2rem;
     gap: 3rem;
     bottom: 0;
