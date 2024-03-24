@@ -1,0 +1,72 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  gap :40px;
+  align-items: center;
+  justify-content: center;
+
+}
+.carta {
+  width: 150px;
+  height: 250px;
+  border: 4px groove black;
+  box-shadow: 25px 25px 15px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  background-color: #ba0000;
+  background-image: url("https://img2.rtve.es/i/?w=1600&i=1657019154219.jpg");  
+  background-size: 370px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.3s;
+}
+.carta:hover {
+  cursor: pointer;
+  transform: scale(1.1); 
+  transition: all 0.3s;
+}
+h3{
+  object-fit: cover;
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.divButton{
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.boton{
+  width: 200px;
+  height: 55px;
+  font-size: 25px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #ba0000;
+  color: white;
+  border: none;
+  cursor:pointer;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#back{
+  align-self: center;
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: black;
+  margin-bottom: 20px;
+}
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}

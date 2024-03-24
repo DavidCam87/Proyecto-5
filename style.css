@@ -1,0 +1,132 @@
+@import url("./src/tresEnRaya/tr.css");
+@import url("./src/juegoMemoria/jm.css");
+@import url("./src/snakeGame/sg.css");
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Poppins', sans-serif;
+  color: rgb(255, 255, 255);
+}
+.logo{
+  font-size: 30px;
+  cursor: pointer;
+}
+.body{
+  background-image: url(/assets/back.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+
+  height: 100svh
+}
+nav{
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-links{
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btnNav{
+  display: none;
+}
+.menu{
+  display: none;
+}
+.tres, .snakeImg{
+  border: 8px solid rgb(255, 255, 255);
+  height: 300px;
+  width: 300px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.memory{
+  border-radius: 20px;
+  height: 300px;
+  width: 300px;
+  cursor: pointer;
+}
+
+#hero{
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 40px
+}
+article{
+  width: 350px;
+  height: 400px;
+  padding: 30px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 655px) {
+  .nav-links{
+    display: none;
+  }
+  
+  .btnNav{
+    display: block;
+    cursor: pointer;
+    font-size: 35px;
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
+  }
+  .nav-links.acti{
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    top: 40px;
+    right: -50px;
+    background-color: var(--dci-textTitle);
+    padding: 2rem;
+    gap: 3rem;
+    bottom: 0;
+    z-index: 3;
+  }
+  .menu.active{
+    display: flex;
+    width: 200px;
+    height: 300px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 51, 21);
+    right: 0;
+    top: 0;
+    z-index: 1;
+    position: fixed;
+    border-radius: 0 0 0 10px;
+  }
+  .closeBtn{
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 165px;
+    font-size: 30px;
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
+  }
+
+}
+

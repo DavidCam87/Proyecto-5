@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap');
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+  background-image: url("/public/assets/backSnake.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+h1{
+  padding: 10px;
+  font-size: 50px;
+  text-align: center;
+}
+.btnStart{
+  padding: 20px;
+
+
+}
+
+.snakebtn{
+  align-self: center;
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: black;
+  border: none;
+}
+.scoreDisplay{
+  padding: 23px;
+  font-size: 20px;
+}    
+
+.table {
+  background: #c9d498;
+  width: 402px;
+  height: 402px;
+  border: 1px solid rgb(0, 0, 0);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 10px;
+}
+.table div {
+  width: 40px;
+  height: 40px;
+  border:1px #8080802b solid;
+  box-sizing:border-box
+}
+.snake {
+  border-radius: 15px;
+  background: rgb(25, 189, 0);
+}
+
+.cabeza{
+  position: relative;
+  left: -9px;
+  width: 56px;
+  transition: transform 0.3s ease;
+
+}
+.apple {
+  background-image: url("assets/manzana.svg");
+}
+.button{
+  background-color: #E4E784;
+  margin-top: 10px;
+  width: 105px;
+  height: 105px;
+  align-self: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 100px;
+}
+.top {
+  border-radius: 50px;
+  position: relative;
+  top: auto;
+  width: 35px;
+  height: 35px;
+}
+.right {  
+  border-radius: 50px;
+  position: relative;
+  top: 10px;
+  align-self: end;
+  width: 35px;
+  height: 35px;
+}
+.bottom {
+  border-radius: 50px;
+  position: relative;
+  top: 25px;
+  width: 35px;
+  height: 35px;
+}
+.left {
+  border-radius: 50px;
+  align-self: start;
+  position: relative;
+  bottom: 40px;
+  width: 35px;
+  height: 35px;
+}
+.newGame {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.playAgain{
+  font-family: Lato;
+  font-weight: 500;
+  font-size: 15px;
+  color: #fff;
+  background: linear-gradient(150deg, #00cc07 0%, #cc0000 100%);
+  padding: 10px 30px;
+  border: none;
+  box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+  border-radius: 50px;
+  transition : 290ms;
+  transform: translateY(0);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer; 
+}
+.playAgain:hover{
+
+  transition : 290ms;
+  padding: 10px 40px;
+  transform : translateY(-5px);
+  background: linear-gradient(150deg, #00cc07 0%, #cc0000 100%);
+  color: #ffffff;
+}
