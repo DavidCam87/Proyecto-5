@@ -136,3 +136,22 @@ h1{
   background: linear-gradient(150deg, #00cc07 0%, #cc0000 100%);
   color: #ffffff;
 }
+@media (max-width: 425px) {
+  .table {
+    background: #c9d498;
+    width: 362px;
+    height: 362px;
+    border: 1px solid rgb(0, 0, 0);
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+  }
+  .table div {
+    width: 36px;
+    height: 36px;
+    border:1px #8080802b solid;
+    box-sizing:border-box
+  }
+  
+  }
