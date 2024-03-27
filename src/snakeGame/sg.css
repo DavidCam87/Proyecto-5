@@ -61,6 +61,7 @@ h1{
 .apple {
   background-image: url(assets/apple.svg);
   background-size: 100%;
+  border-radius: 100px;
 }
 .button{
   background-color: #E4E784;
