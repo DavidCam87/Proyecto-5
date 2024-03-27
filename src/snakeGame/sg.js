@@ -158,6 +158,9 @@ export function snake(pf) {
     createTable();
     startGame();
     newGame.style.display = "none";
+    score = 0;
+    scoreDisplay.textContent = `Puntiacion: ${score}`;
+
   };
   const restart = () => {
     table.innerHTML = "";
