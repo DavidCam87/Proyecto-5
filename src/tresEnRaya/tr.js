@@ -63,35 +63,43 @@ export function tresEnRaya(pf) {
     };
     count = 0;
   };
-  const checkWinner = (player) => {          // Función para comprobar si hay un ganador en la partida actual
-    if (
-      (document.getElementById("one").classList.contains(player) &&
-        document.getElementById("two").classList.contains(player) &&
-        document.getElementById("three").classList.contains(player)) ||
-      (document.getElementById("four").classList.contains(player) &&
-        document.getElementById("five").classList.contains(player) &&
-        document.getElementById("six").classList.contains(player)) ||
-      (document.getElementById("seven").classList.contains(player) &&
-        document.getElementById("eight").classList.contains(player) &&
-        document.getElementById("nine").classList.contains(player)) ||
-      (document.getElementById("one").classList.contains(player) &&
-        document.getElementById("four").classList.contains(player) &&
-        document.getElementById("seven").classList.contains(player)) ||
-      (document.getElementById("two").classList.contains(player) &&
-        document.getElementById("five").classList.contains(player) &&
-        document.getElementById("eight").classList.contains(player)) ||
-      (document.getElementById("three").classList.contains(player) &&
-        document.getElementById("six").classList.contains(player) &&
-        document.getElementById("nine").classList.contains(player)) ||
-      (document.getElementById("one").classList.contains(player) &&
-        document.getElementById("five").classList.contains(player) &&
-        document.getElementById("nine").classList.contains(player)) ||
-      (document.getElementById("three").classList.contains(player) &&
-        document.getElementById("five").classList.contains(player) &&
-        document.getElementById("seven").classList.contains(player))
-    ) {
-      alert(`${player.toUpperCase()} ¡Has Ganado!.Comenzar nueva partida`);
-      resetGame();
+  const checkWinner = (player) => {
+    const checkWinConditions = (player) => {     // Función para comprobar si hay un ganador en la partida actual
+      return (
+        (document.getElementById("one").classList.contains(player) &&
+          document.getElementById("two").classList.contains(player) &&
+          document.getElementById("three").classList.contains(player)) ||
+        (document.getElementById("four").classList.contains(player) &&
+          document.getElementById("five").classList.contains(player) &&
+          document.getElementById("six").classList.contains(player)) ||
+        (document.getElementById("seven").classList.contains(player) &&
+          document.getElementById("eight").classList.contains(player) &&
+          document.getElementById("nine").classList.contains(player)) ||
+        (document.getElementById("one").classList.contains(player) &&
+          document.getElementById("four").classList.contains(player) &&
+          document.getElementById("seven").classList.contains(player)) ||
+        (document.getElementById("two").classList.contains(player) &&
+          document.getElementById("five").classList.contains(player) &&
+          document.getElementById("eight").classList.contains(player)) ||
+        (document.getElementById("three").classList.contains(player) &&
+          document.getElementById("six").classList.contains(player) &&
+          document.getElementById("nine").classList.contains(player)) ||
+        (document.getElementById("one").classList.contains(player) &&
+          document.getElementById("five").classList.contains(player) &&
+          document.getElementById("nine").classList.contains(player)) ||
+        (document.getElementById("three").classList.contains(player) &&
+          document.getElementById("five").classList.contains(player) &&
+          document.getElementById("seven").classList.contains(player))
+      );
+
+    };
+    if (checkWinConditions(player)) {
+      // Retrasar la ejecución del mensaje de "Has Ganado" para que se pinte la tercera casilla antes
+      setTimeout(() => {
+        alert(`${player.toUpperCase()} ¡Has Ganado!. Comenzar nueva partida`);
+        resetGame(); // Resetear el juego después de mostrar el mensaje
+      }, 0);
+
       if (player === "o") {
         o_win++;
         document.getElementById("o_win").textContent = o_win;
@@ -101,10 +109,9 @@ export function tresEnRaya(pf) {
         document.getElementById("x_win").textContent = x_win;
         saveLocalStoragex();
       };
-      return true;
-    };
-    return false;
+    }
   };
+
   const checkDraw = () => {                      // Función para comprobar si hay un empate 
     if (count == 9) {
       alert("¡Empate! ¿Vamos a por otra?");
@@ -135,6 +142,10 @@ export function tresEnRaya(pf) {
     restartGame();
     localStorage.clear();
   });
+  document.querySelector(".clr").addEventListener("click", () => {
+    restartGame();
+    localStorage.clear();
+  });
   document.getElementById("back").addEventListener("click", () => {
     pf();
   });
@@ -145,6 +156,4 @@ export function tresEnRaya(pf) {
   const saveLocalStoragex = () => {
     localStorage.setItem("xwin", x_win);
   };
-
 };
-

@@ -12,8 +12,8 @@
   justify-content: center;
 }
 .carta {
-  width: 150px;
-  height: 250px;
+  width: 130px;
+  height: 180px;
   border: 4px groove black;
   box-shadow: 25px 25px 15px 0px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
@@ -23,6 +23,9 @@
   background-repeat: no-repeat;
   background-position: center;
   transition: all 0.3s;
+}
+.carta.seleccionada{
+  border: 5px groove gold
 }
 .carta:hover {
   cursor: pointer;
@@ -67,4 +70,30 @@ main{
   flex-direction: column;
   align-items: center;
   gap: 30px;
+}
+@media (max-width: 800px) {
+  .carta {
+    width: 90px;
+    height: 140px;
+    border: 4px groove black;
+    box-shadow: 25px 25px 15px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    background-color: #ba0000;
+    background-image: url("https://img2.rtve.es/i/?w=1600&i=1657019154219.jpg");  
+    background-size: 370px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.3s;
+  }
+  .carta.seleccionada{
+    border: 5px groove gold
+  }
+  .carta:hover {
+    cursor: pointer;
+    transform: scale(1.1); 
+    transition: all 0.3s;
+  }
+  #app {
+    width: 100%;
+  }
 }

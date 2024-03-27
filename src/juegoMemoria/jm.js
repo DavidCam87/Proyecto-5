@@ -44,61 +44,51 @@ export function memoryGame(pf) {
     },
     {
       id: 9,
-      color: "brown",
-      imagen: "https://i.pinimg.com/736x/83/8d/ed/838dedfa19d900aaf62223ab19d766a1.jpg"
-    },
-    {
-      id: 10,
-      color: "gold",
-      imagen: "https://i.pinimg.com/736x/83/8d/ed/838dedfa19d900aaf62223ab19d766a1.jpg"
-    },
-    {
-      id: 11,
       color: "red",
       imagen: "https://i.pinimg.com/736x/1a/91/2e/1a912ee6496adf72a468cad7a903d39d.jpg"
     },
     {
-      id: 12,
+      id: 10,
       color: "pink",
       imagen: "https://i.pinimg.com/736x/1a/91/2e/1a912ee6496adf72a468cad7a903d39d.jpg"
     },
     {
-      id: 13,
+      id: 11,
       color: "orange",
       imagen: "https://i.pinimg.com/736x/7e/3a/5a/7e3a5af6baa666820b7f32f04227cfa1.jpg"
     },
     {
-      id: 14,
+      id: 12,
       color: "blue",
       imagen: "https://i.pinimg.com/736x/7e/3a/5a/7e3a5af6baa666820b7f32f04227cfa1.jpg"
     },
     {
-      id: 15,
+      id: 13,
       color: "black",
       imagen: "https://i.pinimg.com/736x/2c/1b/c9/2c1bc9d4d6815fa25ace493e807c9849.jpg"
     },
     {
-      id: 16,
+      id: 14,
       color: "green",
       imagen: "https://i.pinimg.com/736x/2c/1b/c9/2c1bc9d4d6815fa25ace493e807c9849.jpg"
     },
     {
-      id: 17,
+      id: 15,
       color: "yellow",
       imagen: "https://i.pinimg.com/736x/1b/bb/65/1bbb65048971002f81257cd20de9c70b.jpg"
     },
     {
-      id: 18,
+      id: 16,
       color: "turquoise",
       imagen: "https://i.pinimg.com/736x/1b/bb/65/1bbb65048971002f81257cd20de9c70b.jpg"
     },
     {
-      id: 19,
+      id: 17,
       color: "brown",
       imagen: "https://i.pinimg.com/736x/da/21/12/da21120ad8a8718924bee8986239da5d.jpg"
     },
     {
-      id: 20,
+      id: 18,
       color: "gold",
       imagen: "https://i.pinimg.com/736x/da/21/12/da21120ad8a8718924bee8986239da5d.jpg"
     },
@@ -146,10 +136,12 @@ export function memoryGame(pf) {
         resetValores();
       }, 1000);
     }
-    if (puntuacion == 10) {
-      alert("Ganaste");
-    }
-  }
+    if (puntuacion == 9) {
+      setTimeout(() => {
+        alert("Ganaste");
+      }, 250);
+    };
+  };
   const manageSelectionCart = (divCartaNodoHTML, datosDeCadaCarta) => { //saber cuando se selecciona una carta
     if (divCartaNodoHTML.classList.contains('seleccionada')) return;
     if (numCartas < 2) {
@@ -193,25 +185,27 @@ export function memoryGame(pf) {
   divButton.appendChild(button);
   const back = document.createElement('button');
   button.addEventListener('click', () => {
+    for (const elemento of document.querySelectorAll(".seleccionada")) {
+      elemento.classList.remove("seleccionada");
+    };
+    const cartas = document.querySelectorAll('.carta');
+    for (const carta of cartas) {
+      setImageBackground({ nodoHTML: carta });
+    };
+    arrayCartas.sort(() => Math.random() - Math.random());
     puntuacion = 0;
     localStorage.clear()
     puntuacionHTML.textContent = `Puntuacion: ${puntuacion}`;
     resetValores();
-    const cartas = document.querySelectorAll('.carta');
-    for (const carta of cartas) {
-      setImageBackground({ nodoHTML: carta });
-    }
   });
   back.textContent = "Volver";
   back.id = "back";
   main.appendChild(back);
   document.getElementById("back").addEventListener("click", () => {
+    localStorage.clear()
     pf();
   });
-
   const saveLocalStorage = () => {
     localStorage.setItem("puntos", JSON.stringify(puntuacion));
   };
-
-
 };
