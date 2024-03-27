@@ -59,7 +59,7 @@ h1{
   transition: transform 0.3s ease;
 }
 .apple {
-  background-image: url(assets/manzana.svg);
+  background-image: url(assets/apple.svg);
   background-size: 100%;
 }
 .button{
